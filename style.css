@@ -1,0 +1,51 @@
+body {
+    background-color: #0d0e24 !important;
+    font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;
+}
+
+.background {
+     background-color: #0d0e24 !important;
+}
+
+.navbar {
+  position: sticky !important;
+  top: 0;
+  z-index: 1030;
+  backdrop-filter: blur(10px);
+}
+
+.secondary-color {
+    color: #a58a01; /* Lighter shade for secondary text */
+}
+
+.find-your-path {
+  border-radius: 10px;
+  background-image: url('./images/therapy-room.png');
+  background-size: cover;
+  background-position: center;
+  color: rgb(17, 1, 1);           /* Makes text visible on dark images */
+  padding: 60px 20px;     /* Adds space around the text */
+  height: 450px;          /* Set height as needed */
+  position: relative;
+}
+
+.find-your-path-text {
+    width: 80%;
+    text-shadow: #101323 0px 0px 10px;
+    color: #ffffff;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.therapist-img {
+    height: 200px;      /* Set your desired height */
+    object-fit: cover;  /* Ensures the image covers the area without distortion */
+    width: 60%;        /* Optional: makes the image responsive */
+}
+
+input::placeholder {
+  color: #6c757d !important;
+  opacity: 1;
+}
