@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Mindful Path</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>Book a Consultation</title>
+    <link rel="stylesheet" href="./style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <a class="navbar-brand text-light" href="#">
@@ -17,7 +18,7 @@
   <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
 </svg>
                 Mindful Path</a>
-            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -46,53 +47,71 @@
     </nav>
 
 
-    <!--Our therapy services-->
-    <div class="container my-5 text-light">
-        <h4 class="mb-3 text-warning text-center">Our Therapy Services</h4>
-        <p class="lead mb-5">Explore a range of therapeutic approaches tailored to your needs. Our experienced therapists are dedicated to providing compassionate care and support on your journey to well-being.</p>
+    <div class="container my-4 text-light">
+        <h4 class="text-warning">Schedule an Appointment</h4>
+        <p>Please select a service and therapist to view available times.</p>
+    </div>
 
-        <!--Individual Therapy-->
-        <div class="mb-5">
-            <h5 class="text-info">Individual Therapy</h5>
-            <p>Individual therapy provides a safe and confidential space for you to explore personal challenges, gain self-awareness, and develop coping strategies. Our therapists work collaboratively with you to address issues such as anxiety, depression, trauma, relationship difficulties, and life transitions.</p>
+    <!--Service & Therapist select-->
+   <div class="container">
+    <div class="mb-4 text-light">
+      <label class="form-label">Select Service</label>
+      <select class="form-select border-0 w-50" style="background-color: #1e2254; color: #6c757d;">
+        <option selected disabled>Select a service</option>
+        <option>Therapy Session</option>
+        <option>Consultation</option>
+        <option>Follow-up</option>
+      </select>
+    </div>
+
+    <div class="mb-4 text-light">
+      <label class="form-label">Select Therapist</label>
+      <select class="form-select border-0 w-50" style="background-color: #1e2254; color: #6c757d;">
+        <option selected disabled>Select a therapist</option>
+        <option>Dr. Jane Doe</option>
+        <option>Mr. John Smith</option>
+        <option>Ms. Clara White</option>
+      </select>
+    </div>
+
+     <div class="mb-4 text-light">
+      <label class="form-label">Select Date</label>
+      <input type="text" id="calendar" class="form-control border-0 w-50 text-warning"
+             style="background-color: #1e2254;" placeholder="Pick a date"/>
+    </div>
+   </div>
+
+    <!--Time slots-->
+    <div class="container justify-content-center text-info">
+        <h5 class="pt-4 pb-2 text-light justify-content-start">Available Time Slots</h5>
+        <div class="row">
+            <div class="col-md-2">
+                <button class="btn btn-outline-info w-100 mb-2">9:00 AM</button>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-outline-info w-100 mb-2">10:00 AM</button>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-outline-info w-100 mb-2">11:00 AM</button>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-outline-info w-100 mb-2">1:00 PM</button>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-outline-info w-100 mb-2">2:00 PM</button>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-outline-info w-100 mb-2">3:00 PM</button>
+            </div>
         </div>
+    </div>
 
-        <!--Couples Therapy-->
-        <div class="mb-5">
-            <h5 class="text-info">Couples Therapy</h5>
-            <p>Couples therapy focuses on improving communication, resolving conflicts, and strengthening the bond between partners. Whether you're facing specific challenges or seeking to enhance your relationship, our therapists offer guidance and support to help you navigate your journey together.</p>
-        </div>
-
-        <!--Family Therapy-->
-        <div class="mb-5">
-            <h5 class="text-info">Family Therapy</h5>
-            <p>Family therapy addresses the dynamics and patterns within a family system. Our therapists work with families to improve communication, resolve conflicts, and foster healthier relationships among family members. We support families in navigating challenges such as parenting issues, sibling conflicts, and life transitions.</p>
-        </div>
-
-        <!--Group Therapy-->
-        <div class="mb-5">
-            <h5 class="text-info">Group Therapy</h5>
-            <p>Group therapy offers a supportive environment where individuals can connect with others facing similar challenges. Under the guidance of a therapist, group members share experiences, gain insights, and develop coping skills. Group therapy can be particularly beneficial for issues such as grief, addiction, and social anxiety.</p>
-        </div>
-
-        <!--Cognitive Behavioral Therapy (CBT)-->
-        <div class="mb-5">
-            <h5 class="text-info">Cognitive Behavioral Therapy (CBT)</h5>
-            <p>CBT is a goal-oriented therapy that focuses on identifying and changing negative thought patterns and behaviors. Our therapists use CBT techniques to help clients manage anxiety, depression, phobias, and other mental health conditions. CBT empowers individuals to develop practical skills for lasting change.</p>
-        </div>
-
-        <!--Mindfulness-Based Therapy-->
-        <div class="mb-5">
-            <h5 class="text-info">Mindfulness-Based Therapy</h5>
-            <p>Mindfulness-based therapy integrates mindfulness practices with traditional therapy approaches. Our therapists guide clients in cultivating present-moment awareness, reducing stress, and enhancing emotional regulation. This approach can be helpful for managing anxiety, chronic pain, and improving overall well-being.</p>
-         </div>
-
-         <a href="../html/consultation.html" class="btn btn-info my-4">Book an Appointment</a>
-
+    <div class="container text-center my-4">
+        <button class="btn btn-warning" type="button">Book Appointment</button>
     </div>
 
     <!-- Footer -->
-     <footer class="text-center text-lg-start text-white mt-5">
+    <footer class="text-center text-lg-start text-white mt-5">
         <div class="text-center p-3 d-flex justify-content-around">
             <a href="./privacy.html" class="text-secondary text-decoration-none">Privacy Policy</a>
             <a href="./terms.html" class="text-secondary text-decoration-none">Terms of Service</a>
@@ -102,6 +121,16 @@
             © 2025 Mindful Path. All rights reserved.
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        flatpickr("#calendar", {
+            enableTime: true,
+            dateFormat: "Y-m-d H:i",
+            showMonths: 1,
+            disableMobile: true
+        });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
